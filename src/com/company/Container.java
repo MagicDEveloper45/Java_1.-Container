@@ -83,9 +83,11 @@ public class Container
 
         if (index < lengthOfMass - 1)
         {
+            arrayUp();
             for (int i = lengthOfMass - 1; i > index; i--)        {
                 mass[i] = mass[i-1];
             }
+            counter++;
         }
         else
         {
@@ -124,11 +126,11 @@ public class Container
             return;
         }
 
-
         for (int i = index; i < lengthOfMass - 1; i++)        {
             mass[i] = mass[i+1];
         }
         arrayDown();
+        counter--;
 
     }
 
